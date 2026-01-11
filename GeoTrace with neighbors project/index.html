@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeoTrace | Find My Location</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <link
+      rel="icon"
+      href="https://png.pngtree.com/png-vector/20230620/ourmid/pngtree-3d-location-icon-map-logo-design-symbol-transparent-background-vector-png-image_7166709.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="" /> 
+        <div>
+          <span>GeoTrace</span>
+          <p id="headPara"></p>
+        </div>
+      </div>
+      <button class="primary-btn">Find My Location</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Discover Your Location Instantly</h1>
+        <p>
+          Trace your country, city, coordinates, and more with one click. <br />
+          <i><b>Start Tracking Now!</b></i>
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="https://img.freepik.com/premium-photo/digital-map-with-location-pin_1276740-781.jpg?semt=ais_hybrid&w=740&q=80"
+          alt="Map Image"
+        />
+      </div>
+    </section>
+
+    <!-- RESULT SECTION YOUR OWN COUNTRY -->
+    <section class="results"></section>
+
+    <!-- RESULT SECTION YOUR NEIGHBOR COUNTRY -->
+    <section class="resultsneighbor"></section>
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script
+      src="https://kit.fontawesome.com/df5205f864.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
