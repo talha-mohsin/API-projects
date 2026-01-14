@@ -417,10 +417,11 @@ body {
   }
   .carousalSlider {
     width: 100%;
-    padding: 1rem;
+    padding: 0rem;
   }
   .flag_coat {
-    padding: 1.5rem;
+    padding: 0rem;
+    padding-top: 10px;
   }
 
   .flag {
@@ -429,7 +430,8 @@ body {
   }
 
   .flag img {
-    width: 40%;
+    width: 35%;
+    height: 80px;
   }
 
   .cards-grid {

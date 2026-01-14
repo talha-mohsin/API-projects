@@ -121,7 +121,8 @@ locateBtn.addEventListener("click", () => {
         <div class="flag">
           <img src="${flags.png}" alt="Country Flag" />
           <div class="name">
-            <h1>Karachi, ${name.common}</h1>
+            <h1>Karachi,</h1>
+            <h3 style="color:gray">${name.common}</h3>
             <p>${name.official}</p>
           </div>
         </div>
@@ -254,7 +255,7 @@ locateBtn.addEventListener("click", () => {
           <div class="flag">
             <img src="${data.flags.png}" alt="Country Flag" />
             <div class="name">
-              <h1>${data.name.common}</h1>
+              <h2>${data.name.common}</h2>
               <p>${data.name.official}</p>
               <p>${data.subregion}</p>
             </div>  
