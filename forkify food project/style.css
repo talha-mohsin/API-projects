@@ -12,7 +12,6 @@ body {
 
 .container {
   width: 97%;
-  min-height: 100vh;
   min-height: 85vh;
   height: auto;
   background-color: #fff;

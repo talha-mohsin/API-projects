@@ -42,7 +42,7 @@ async function foodHandler(e) {
 
   document.querySelector('.recipeData').style.display = 'block'
   document.querySelector('#cross').style.display = 'flex';
-  document.querySelector('.totalRecipes').style.height = '200vh';
+  document.querySelector('.totalRecipes').style.height = '250vh';
 }
 
 function recipeUI(recipes) {
