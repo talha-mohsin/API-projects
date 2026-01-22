@@ -1,6 +1,16 @@
+let countryName = 'Pakistan'; //prompt('Enter your country name.')
+let cityName = 'Karachi'; //prompt('Enter your city name.')
 
-let countryName = prompt('Enter your country name.')
-let cityName = prompt('Enter your city name.')
+navigator.geolocation.getCurrentPosition(position => {
+    let lat = position.coords.latitude;
+    let long = position.coords.longitude;
+
+    console.log(lat, '==> lat\n', long, '==>> long')
+    getWeather(lat, long);
+
+}, err => {
+    console.log(err, '==>> err')
+})
 
 async function getLocation() {
 
@@ -9,24 +19,11 @@ async function getLocation() {
         console.log(res);
         let data = await res.json();
         console.log(data);
+        let {results} = data;
+        console.log(results)
     } catch (err) {
-        console.log(err)
+        console.log(err);    
     }
-
-
-
-
-
-    // navigator.geolocation.getCurrentPosition(position => {
-    //     let lat = position.coords.latitude;
-    //     let long = position.coords.longitude;
-
-    //     console.log(lat, '==> lat\n', long, '==>> long')
-    //     getWeather(lat, long);
-
-    // }, err => {
-    //     console.log(err, '==>> err')
-    // })
 }
 getLocation()
 
