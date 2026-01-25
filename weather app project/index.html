@@ -1,30 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/free-ios-weather-icon-svg-download-png-461610.png">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: #e3e3e3;
-        }
-    </style>
+    <!-- ICONS -->
+    <link rel="icon"
+        href="https://cdn.iconscout.com/icon/free/png-256/free-ios-weather-icon-svg-download-png-461610.png">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <h2>SkyCast</h2>
-        <input type="text" placeholder="City Name">
-        <img src="" alt="">
-        
+    <main class="mainContainer">
+        <header class="inputContainer">
+            <input class="cityInput" placeholder="Search city" type="text">
+            <button class="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </header>
+        <section class="weatherInfo" style="display: none;">
+            <div class="locationDateContainer">
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4 class="countryTxt">Jakarta</h4>
+                </div>
+                <div class="currentDateTxt regularTxt">Thur, 07 Aug</div>
+            </div>
+            <div class="weatherSummaryContainer">
+                <img src="assets/weather/clouds.svg" class="weatherSummaryImg">
+                <div class="weatherSummaryInfo">
+                    <h1 class="tempTxt">29 °C</h1>
+                    <h3 class="conditionTxt regularTxt">Clouds</h3>
+                </div>
+            </div>
+            
+            <div class="weatherConditionsContainer">
+                <div class="conditionItem">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div class="conditionInfo">
+                        <h5 class="regularTxt">Humidity</h5>
+                        <h5 class="humidityValueTxt">55%</h5>
+                    </div>
+                </div>
 
-    </div>
+                <div class="conditionItem">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="conditionInfo">
+                        <h5 class="regularTxt">Wind Speed</h5>
+                        <h5 class="windValueTxt">2 M/s</h5>
+                    </div>
+                </div>
+            </div>
 
-    <script type="module" src="app.js"></script>
+            <div class="forecastItemsContaier">
+                <div class="forecastItem">
+                    <h5 class="forecastItemDate regularTxt">05 Aug </h5>
+                    <img src="assets/weather/thunderstorm.svg" class="forecastItemImg">
+                    <h5 class="forecastItemTemp">29 °C</h5>
+                </div>
+                <div class="forecastItem">
+                    <h5 class="forecastItemDate regularTxt">05 Aug </h5>
+                    <img src="assets/weather/thunderstorm.svg" class="forecastItemImg">
+                    <h5 class="forecastItemTemp">29 °C</h5>
+                </div>
+                <div class="forecastItem">
+                    <h5 class="forecastItemDate regularTxt">05 Aug </h5>
+                    <img src="assets/weather/thunderstorm.svg" class="forecastItemImg">
+                    <h5 class="forecastItemTemp">29 °C</h5>
+                </div>
+                <div class="forecastItem">
+                    <h5 class="forecastItemDate regularTxt">05 Aug </h5>
+                    <img src="assets/weather/thunderstorm.svg" class="forecastItemImg">
+                    <h5 class="forecastItemTemp">29 °C</h5>
+                </div>
+            </div>
+        </section>
+
+        <section class="notFound sectionMessage" style="display: none;">
+            <img src="assets/message/not-found.png" alt="">
+
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regularTxt">
+                    Find out their weather condition of the city
+                </h4>
+            </div>
+        </section>
+
+        <div class="loader">
+            <span id="dot1"></span><span id="dot2"></span><span id="dot3"></span>
+        </div>
+    </main>
+
+    <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/df5205f864.js" crossorigin="anonymous"></script>
 </body>
 </html>
